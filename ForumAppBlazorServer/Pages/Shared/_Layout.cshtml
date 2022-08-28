@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.Mvc.ViewEngines
+@using Microsoft.AspNetCore.Components.Web
 @inject IWebHostEnvironment Environment
 @inject ICompositeViewEngine Engine
 <!DOCTYPE html>
@@ -20,12 +21,15 @@
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/Identity/css/site.css" asp-append-version="true" />
     </environment>
+
+    <base href="~/" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" href="~/">ForumAppBlazorServer</a>
+                <a class="navbar-brand" href="~/">Forum App Blazor Server</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -89,6 +93,7 @@
         <script src="~/Identity/js/site.js" asp-append-version="true"></script>
     </environment>
 
+    <script src="_framework/blazor.server.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
