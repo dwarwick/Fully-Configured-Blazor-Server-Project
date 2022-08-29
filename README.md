@@ -1,4 +1,4 @@
-# ForumAppBlazorServer
+# Fully Configured Blazor Server Project #
 ### This is a Blazor Server project template with the following configuration: ###
 
 * .Net 6
