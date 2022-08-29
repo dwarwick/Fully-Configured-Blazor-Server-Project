@@ -5,7 +5,7 @@
 * Bootstrap 5.2
 * DBContext configured
 * Full Identity Scafolded and Configured
-* Razor Pages and Routable Razor Components layout share the same layout file
+* Razor Pages and Routable Razor Components share the same layout file for a consistent look and feel for both .cshtml files and .razor files
 * Bootstrap Navbar menu accross the top of  the template
 
 ### You will need to make the following changes: ###
