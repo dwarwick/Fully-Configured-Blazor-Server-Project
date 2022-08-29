@@ -8,7 +8,7 @@
 * Razor Pages and Routable Razor Components layout share the same layout file
 * Bootstrap Navbar menu accross the top of  the template
 
-### You will need to make the following changes ###
+### You will need to make the following changes: ###
 #### FetchData.razor ####
 * Change @using ForumAppBlazorServer.Data to @using YourNamespace.Data
 
