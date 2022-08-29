@@ -4,7 +4,7 @@
 * .Net 6
 * Bootstrap 5.2
 * DBContext configured
-* Full Identity scafolded and Configured
+* Full Identity Scafolded and Configured
 * Razor Pages and Routable Razor Components layout share the same layout file
 * Bootstrap Navbar menu accross the top of  the template
 
