@@ -1,0 +1,30 @@
+﻿@using System.Security.Claims
+@inject AuthenticationStateProvider _authenticationStateProvider
+@inject NavigationManager _navigationManager;
+
+@code {
+    [CascadingParameter]
+    public Task<AuthenticationState>? _authenticationState { get; set; }
+    [Inject]
+    public NavigationManager? navigation { get; set; }
+    bool notAuthorized { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await _authenticationState;
+        ClaimsPrincipal user = authState.User;
+        if (authState?.User?.Identity is null || !authState.User.Identity.IsAuthenticated)
+        {
+            var returnUrl = navigation?.ToBaseRelativePath(navigation.Uri);
+
+            if (string.IsNullOrEmpty(returnUrl))
+            {
+                _navigationManager.NavigateTo("Login");
+            }
+            else
+            {
+                _navigationManager.NavigateTo($"/Identity/Account/Login?returnUrl=~/{returnUrl}", true);
+            }
+        }
+    }
+}

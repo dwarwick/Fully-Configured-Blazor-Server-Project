@@ -1,9 +1,12 @@
-﻿@page "/fetchdata"
+﻿@page "/FetchData"
+@using ForumAppBlazorServer.Data
+@inject WeatherForecastService ForecastService
+@attribute [Authorize]
+
 
 <PageTitle>Weather forecast</PageTitle>
 
-@using ForumAppBlazorServer.Data
-@inject WeatherForecastService ForecastService
+
 
 <h1>Weather forecast</h1>
 
