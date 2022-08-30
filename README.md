@@ -14,14 +14,14 @@
 
 ### You will need to make the following changes: ###
 #### FetchData.razor ####
-* Change @using ForumAppBlazorServer.Data to @using YourNamespace.Data
+* Change *@using ForumAppBlazorServer.Data* to *@using YourNamespace.Data*
 
 #### _Imports.razor (in the root of the project) ####
-* Change @using ForumAppBlazorServer to @using YourNamespace
-* Change @using ForumAppBlazorServer.Shared to @using YourNamespace.Shared
+* Change *@using ForumAppBlazorServer* to *@using YourNamespace*
+* Change *@using ForumAppBlazorServer.Shared* to *@using YourNamespace.Shared*
 
 #### appsettings.json ####
-* Update the database name from ForumDb in ConnectionStrings_DefaultConnection to your preferred database name, or enter your own connection string.
+* Update the database name from *ForumDb* in *ConnectionStrings_DefaultConnection* to your preferred database name, or enter your own connection string.
 
 
 ### Create the Database ###
