@@ -11,6 +11,11 @@
 
     protected override async Task OnInitializedAsync()
     {
+        if(_authenticationState is null)
+        {
+            _navigationManager.NavigateTo("Login");
+            return;
+        }
         AuthenticationState authState = await _authenticationState;
         ClaimsPrincipal user = authState.User;
         if (authState?.User?.Identity is null || !authState.User.Identity.IsAuthenticated)
